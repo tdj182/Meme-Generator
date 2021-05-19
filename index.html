@@ -6,40 +6,42 @@ Use JS to append a div with the meme (the image and text)
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="app.css">
   <title>Meme Generator</title>
 </head>
 <body>
-  <header >
-    <form action="" id="newMemeForm">
-      <ul>
-        <li>
-          <label for="imageLink">Image URL</label>
-          <input type="url" name="imageLink" id="imageLink" placeholder="Insert image URL here!">
-        </li>
-        <li>
-          <label for="topText">Text On Top</label>
-          <input type="text" name="topText" id="topText" placeholder="(Optional) Any Text at the top?">
-        </li>
-        <li>
-          <label for="bottomText">Text On Bottom</label>
-          <input type="text" name="bottomText" id="bottomText" placeholder="(Optional) Any Text at the bottom?">
-        </li>
-        <li>  
-          <button id='submitBtn' type="submit">Add Meme!</button>
-        </li>
-      </ul>
-      <span>
-        <h1 class='top'>MEMEz!</h1>
-        <img id='introGif' src="https://media.tenor.com/images/a93c09111f8b160305cfb79f0a74f92c/tenor.gif" alt="">
-        <h1 class='bottom'>PLOX!</h1>
-      </span>
-    </form>
+  <header>
+    <div class="container">
+      <div class="row">
+        <form id="newMemeForm" class="py-2 col-sm-12 col-md-8">
+          <div class="mb-3">
+            <label for="image-url" class="form-label">Image URL</label>
+            <input type="url" class="form-control" id="imageLink" aria-describedby="image-url" placeholder="Insert image URL here!">
+          </div>
+          <div class="mb-3">
+            <label for="topText" class="form-label">Text On Top</label>
+            <input type="text" id="topText" name="topText" class="form-control" id="exampleInputPassword1" placeholder="(Optional) Any Text at the top?">
+          </div>
+          <div class="mb-3">
+            <label for="bottomText" class="form-label">Text On Bottom</label>
+            <input type="text" id="bottomText" name="bottomText" class="form-control" id="bottomText" placeholder="(Optional) Any Text at the bottom?">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <span id="header-img-area" class="py-2 col-md-4 d-sm-none d-md-inline">
+          <h1 class='top'>MEMEz!</h1>
+          <img id='introGif' src="https://media.tenor.com/images/a93c09111f8b160305cfb79f0a74f92c/tenor.gif" alt="">
+          <h1 class='bottom'>PLOX!</h1>
+        </span>
+      </div>
+    </div>
   </header>
   
-  <section id='memeList'>
+  <section id='memeList' class="container">
     <!-- sample -->
-    <div>
+    <div class="mx-auto">
       <h1 class="top">"One last match"</h1>
       <button class="deleteBtn">&#10006;</button>
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Stoned_Fox_.jpg" alt="&#128534">
@@ -48,6 +50,7 @@ Use JS to append a div with the meme (the image and text)
     <!-- sample -->
   </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
 </html>
