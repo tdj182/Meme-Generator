@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(background.jpg);
+}
+
+/* From Related */
+form {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: rgba(255, 255, 255, 0.5) 1px solid; /*Stretches the gray background to the top??*/
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  list-style-type: none;
+  flex-grow: 8;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+input {
+  width: 80%;
+}
+
+#introGif {
+ height: 100%;
+}
+
+#submitBtn {
+  margin-top: 2px;
+  width: 100px;
+}
+
+span {
+  display: inline-block;
+  position: relative;
+}
+
+#bottomTextIntro {
+  bottom: 10px;
+}
+
+/* Form END */
+
+/* Meme area */
+div {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  border-top: 1px solid white;
+}
+
+img {
+  max-width: 500px;
+  box-shadow: 8px -9px 31px 0px rgba(0,0,0,0.75);
+  background-color: white;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.top, .bottom, #topTextIntro, #bottomTextIntro {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;;
+}
+
+.bottom {
+  bottom: 5%
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.deleteBtn:hover {
+  background-color: red;
+  border: 2px solid white;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+  #form-img {
+    visibility: hidden;
+  }
+}

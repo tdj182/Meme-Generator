@@ -1,0 +1,53 @@
+<!-- get link to image, text for the top of the meem, and text for the bottom of the meme. 
+Use JS to append a div with the meme (the image and text)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <title>Meme Generator</title>
+</head>
+<body>
+  <header >
+    <form action="" id="newMemeForm">
+      <ul>
+        <li>
+          <label for="imageLink">Image URL</label>
+          <input type="url" name="imageLink" id="imageLink" placeholder="Insert image URL here!">
+        </li>
+        <li>
+          <label for="topText">Text On Top</label>
+          <input type="text" name="topText" id="topText" placeholder="(Optional) Any Text at the top?">
+        </li>
+        <li>
+          <label for="bottomText">Text On Bottom</label>
+          <input type="text" name="bottomText" id="bottomText" placeholder="(Optional) Any Text at the bottom?">
+        </li>
+        <li>  
+          <button id='submitBtn' type="submit">Add Meme!</button>
+        </li>
+      </ul>
+      <span>
+        <h1 class='top'>MEMEz!</h1>
+        <img id='introGif' src="https://media.tenor.com/images/a93c09111f8b160305cfb79f0a74f92c/tenor.gif" alt="">
+        <h1 class='bottom'>PLOX!</h1>
+      </span>
+    </form>
+  </header>
+  
+  <section id='memeList'>
+    <!-- sample -->
+    <div>
+      <h1 class="top">"One last match"</h1>
+      <button class="deleteBtn">&#10006;</button>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Stoned_Fox_.jpg" alt="&#128534">
+      <h1 class="bottom">6 hours later</h1>
+    </div>
+    <!-- sample -->
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
